@@ -35,8 +35,12 @@ Section entete
 
 utilisation : 
 
+<header class="header">
+
 Elements : 
 
+header__top : haut de page de la page web
+header_hero : fiche principale juste en dessous du haut de page
 
 */
 
@@ -56,8 +60,34 @@ Section haut de page
 
 utilisation : 
 
+<div class="header__top">
+        <div class="header__top__brand">
+          <span class="header__top__logo">LUM.UR</span>
+          <span class="header__top__title">Lumière Urbaine</span>
+        </div>
+        <nav class="header__top__nav">
+          <a href="#">Programmation</a>
+          <a href="#">Horaire</a>
+          <a href="#">Artistes</a>
+          <a href="#">Billets</a>
+          <a href="#">Partenaires</a>
+          <a href="#">Témoignages</a>
+          <a href="#">Contact</a>
+        </nav>
+        <div class="header__top__cta">
+          <div class="header__top__cta__button"></div>
+          <span class="header__top__cta__title">Obtenez vos billets</span>
+        </div>
+      </div>
+
 Elements : 
 
+header__top__brand : contenu qui contient logo et titre
+header__top__logo : logo du site
+header__top__title : nom du site
+header__top__cta : contenu du bouton et titre du bouton
+header__top__cta__button : bouton cta
+header__top__cta__title : titre du bouton cta
 
 */
 
@@ -135,8 +165,34 @@ Section hero
 
 utilisation : 
 
+<section class="header__hero">
+        <div class="header__container">
+          <div class="header__container__text">
+            <h1 class="header__container__title">Lumière.urbaine</h1>
+            <p class="header__container__subtitle">
+              3 jours de musique et d’art immersif.
+            </p>
+          </div>
+          <div class="header__container__button">
+            <div class="header__container__button--secondary">
+              En savoir plus
+            </div>
+            <div class="header__container__button--primary">
+              Acheter des billets
+            </div>
+          </div>
+        </div>
+      </section>
+
 Elements : 
 
+header__container: conteneur pour les elements texte et bouton
+header__container__text : contient les elements titre et soutitre
+header__container__title : titre du hero
+header__container__subtitle : sous-titre du hero
+header__container__button : contient les 2 types de boutons
+header__container__button--secondary : bouton secondaire
+header__container__button--primary : bouton primaire
 
 */
 
@@ -218,13 +274,20 @@ Section main
 
 utilisation : 
 
+<main class="main">
+
 Elements : 
 
+main__products : contient les produits du sites
+main__contents : contient les informations sur l'horaire et le temoignage
+main__list : contient l'informations sur les billets et les partenaires
+main__form : contient les formulaires pour contacter le personnel
 
 */
 
 .main {
   display: flex;
+  flex-direction: column;
 }
 
 /*
@@ -232,8 +295,148 @@ Section produits
 
 utilisation : 
 
+<section class="main__products">
+        <div class="main__products__container">
+          <h2 class="main__products__container__title">Programmation</h2>
+        </div>
+        <div class="main__products__row">
+          <div class="main__products__row__card">
+            <div class="main__products__row__card__img">
+              <div class="main__products__row__card__img__tag">Jour 1</div>
+              <span class="main__products__row__card__img__title"
+                >Vendredi Festival</span
+              >
+            </div>
+            <div class="main__products__row__card__content">
+              <span class="main__products__row__card__content__title"
+                >Vendredi</span
+              >
+              <span class="main__products__row__card__content__subtitle"
+                >Liste des performances du vendredi</span
+              >
+            </div>
+          </div>
+          <div class="main__products__row__card">
+            <div class="main__products__row__card__img">
+              <div class="main__products__row__card__img__tag">Jour 2</div>
+              <span class="main__products__row__card__img__title"
+                >Samedi Festival</span
+              >
+            </div>
+            <div class="main__products__row__card__content">
+              <span class="main__products__row__card__content__title"
+                >Samedi</span
+              >
+              <span class="main__products__row__card__content__subtitle"
+                >Liste des performances du samedi</span
+              >
+            </div>
+          </div>
+          <div class="main__products__row__card">
+            <div class="main__products__row__card__img">
+              <div class="main__products__row__card__img__tag">Jour 3</div>
+              <span class="main__products__row__card__img__title"
+                >Dimanche Festival</span
+              >
+            </div>
+            <div class="main__products__row__card__content">
+              <span class="main__products__row__card__content__title"
+                >Dimanche</span
+              >
+              <span class="main__products__row__card__content__subtitle"
+                >Liste des performances du dimanche</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      deuxieme section produits : 
+
+      <section class="main__products">
+        <div class="main__products__container">
+          <h2 class="main__products__container__title">Artistes</h2>
+        </div>
+        <div class="main__products__row">
+          <div class="main__products__row__card">
+            <div class="main__products__row__card__img">
+              <div class="main__products__row__card__img__badge">
+                En vedette
+              </div>
+              <span class="main__products__row__card__img__title"
+                >Artiste 1</span
+              >
+            </div>
+            <div class="main__products__row__card__content">
+              <span class="main__products__row__card__content__title"
+                >Bob l’artiste favori des médias numériques</span
+              >
+              <span class="main__products__row__card__content__subtitle"
+                >Genre: Pop</span
+              >
+            </div>
+          </div>
+          <div class="main__products__row__card">
+            <div class="main__products__row__card__img">
+              <span class="main__products__row__card__img__title"
+                >Artiste 2</span
+              >
+            </div>
+            <div class="main__products__row__card__content">
+              <span class="main__products__row__card__content__title"
+                >George l’artiste émergeant très prometteur</span
+              >
+              <span class="main__products__row__card__content__subtitle"
+                >Genre: Rock</span
+              >
+            </div>
+          </div>
+          <div class="main__products__row__card">
+            <div class="main__products__row__card__img">
+              <span class="main__products__row__card__img__title"
+                >Artiste 3</span
+              >
+            </div>
+            <div class="main__products__row__card__content">
+              <span class="main__products__row__card__content__title"
+                >Mélo Super Nova</span
+              >
+              <span class="main__products__row__card__content__subtitle"
+                >Genre: Jazz</span
+              >
+            </div>
+          </div>
+          <div class="main__products__row__card">
+            <div class="main__products__row__card__img">
+              <span class="main__products__row__card__img__title"
+                >Artiste 4</span
+              >
+            </div>
+            <div class="main__products__row__card__content">
+              <span class="main__products__row__card__content__title"
+                >Marie la Kid Synthétique</span
+              >
+              <span class="main__products__row__card__content__subtitle"
+                >Genre: Électro</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
 Elements : 
 
+main__products__container : conteneur pour le titre
+main__products__container__title : titre du produit
+main__products__row : contient la rangee de produits
+main__products__row__card : carte de la rangee de produits
+main__products__row__card__img : image de la carte
+main__products__row__card__img__tag : tag sur les images de programmation
+main__products__row__card__img__badge : badge sur l'artiste 1 
+main__products__row__card__img__title : titre de l'image de la carte
+main__products__row__card__content : conteneur de l'information de la carte
+main__products__row__card__content__title : information principale de la carte
+main__products__row__card__content__subtitle : information secondaire de la carte
 
 */
 
@@ -365,8 +568,101 @@ Section contents
 
 utilisation : 
 
+<section class="main__contents">
+        <div class="main__contents__container">
+          <span class="main__contents__container__title">Horaire</span>
+          <span class="main__contents__container__subtitle"
+            >Consultez notre horaire des performances.</span
+          >
+        </div>
+        <div class="main__contents__list">
+          <div class="main__contents__list__article">
+            <div class="main__contents__list__article__img">
+              <div class="main__contents__list__article__img__svg"></div>
+              <div class="main__contents__list__article__img__letter">V</div>
+            </div>
+            <div class="main__contents__list__article__content">
+              <span class="main__contents__list__article__title">Vendredi</span>
+              <span class="main__contents__list__article__subtitle"
+                >Performances de 15h à 23h.</span
+              >
+            </div>
+          </div>
+          <div class="main__contents__list__article">
+            <div class="main__contents__list__article__img">
+              <div class="main__contents__list__article__img__svg"></div>
+              <div class="main__contents__list__article__img__letter">S</div>
+            </div>
+            <div class="main__contents__list__article__content">
+              <span class="main__contents__list__article__title">Samedi</span>
+              <span class="main__contents__list__article__subtitle"
+                >Performances de 12h à 22h.</span
+              >
+            </div>
+          </div>
+          <div class="main__contents__list__article">
+            <div class="main__contents__list__article__img">
+              <div class="main__contents__list__article__img__svg"></div>
+              <div class="main__contents__list__article__img__letter">D</div>
+            </div>
+            <div class="main__contents__list__article__content">
+              <span class="main__contents__list__article__title">Dimanche</span>
+              <span class="main__contents__list__article__subtitle"
+                >Performances de 14h à 21h.</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+       deuxieme section contents : 
+
+       <section class="main__contents">
+        <div class="main__contents__container">
+          <span class="main__contents__container__title">Témoignages</span>
+          <span class="main__contents__container__subtitle"
+            >Ecoutez ce que les gens disent!</span
+          >
+        </div>
+        <div class="main__contents__list">
+          <div class="main__contents__list__article">
+            <div class="main__contents__list__article__img">
+              <div class="main__contents__list__article__img__svg"></div>
+            </div>
+            <div class="main__contents__list__article__content">
+              <span class="main__contents__list__article__title">Anne</span>
+              <span class="main__contents__list__article__subtitle"
+                >Un festival incroyable avec une ambiance électrisante!</span
+              >
+            </div>
+          </div>
+          <div class="main__contents__list__article">
+            <div class="main__contents__list__article__img">
+              <div class="main__contents__list__article__img__svg"></div>
+            </div>
+            <div class="main__contents__list__article__content">
+              <span class="main__contents__list__article__title">Marco</span>
+              <span class="main__contents__list__article__subtitle"
+                >Des artistes de haut niveau et une organisation parfaite.</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
 Elements : 
 
+main__contents__container : conteneur pour le titre et soutitre de l'horaire et le temoignage
+main__contents__container__title : titre principal
+main__contents__container__subtitle : sous-titre principal
+main__contents__list : liste des elements contenu 
+main__contents__list__article : contient les elements dans l'article
+main__contents__list__article__img : image de l'article
+main__contents__list__article__img__svg : icone de l'article
+main__contents__list__article__img__letter : lettre a l'interieur de l'icone de l'article
+main__contents__list__article__content : information sur l'article 
+main__contents__list__article__title : titre principal de l'article
+main__contents__list__article__subtitle : sous-titre principal de l'article
 
 */
 
@@ -490,8 +786,69 @@ Section liste
 
 utilisation : 
 
+<section class="main__list">
+        <div class="main__list__container">
+          <span class="main__list__container__title">Billets</span>
+        </div>
+        <div class="main__list__row">
+          <div class="main__list__row__item">
+            <div class="main__list__row__item__logo"></div>
+            <span class="main__list__row__item__title">Standard</span>
+            <span class="main__list__row__item__subtitle">$50</span>
+          </div>
+          <div class="main__list__row__item">
+            <div class="main__list__row__item__logo"></div>
+            <span class="main__list__row__item__title">VIP</span>
+            <span class="main__list__row__item__subtitle">$100</span>
+          </div>
+          <div class="main__list__row__item">
+            <div class="main__list__row__item__logo"></div>
+            <span class="main__list__row__item__title">Passeport 3 jours</span>
+            <span class="main__list__row__item__subtitle">$120</span>
+          </div>
+        </div>
+      </section>
+      <section class="main__list">
+        <div class="main__list__container">
+          <span class="main__list__container__title">Partenaires</span>
+          <span class="main__list__container__subtitle"
+            >Nos précieux partenaires.</span
+          >
+        </div>
+        <div class="main__list__row">
+          <div class="main__list__row__item">
+            <div class="main__list__row__item__logo"></div>
+            <span class="main__list__row__item__title">Partenaire inc.</span>
+          </div>
+          <div class="main__list__row__item">
+            <div class="main__list__row__item__logo"></div>
+            <span class="main__list__row__item__title"
+              >Précieux et investit</span
+            >
+          </div>
+          <div class="main__list__row__item">
+            <div class="main__list__row__item__logo"></div>
+            <span class="main__list__row__item__title"
+              >Une compagnie qui investit</span
+            >
+          </div>
+          <div class="main__list__row__item">
+            <div class="main__list__row__item__logo"></div>
+            <span class="main__list__row__item__title">Super partenaire</span>
+          </div>
+        </div>
+      </section>
+
 Elements : 
 
+main__list__container : conteneur pour le titre et soutitre des listes
+main__list__container__title : titre du conteneur 
+main__list__container__subtitle : sous-titre du conteneur 
+main__list__row : contient les items sur sa rangee
+main__list__row__item : contient les elements des items
+main__list__row__item__logo : logo de l'item
+main__list__row__item__title : titre principal de l'item
+main__list__row__item__subtitle : sous-titre principal de l'item
 
 */
 
@@ -601,8 +958,58 @@ Section formulaire
 
 utilisation : 
 
+<section class="main__form">
+        <div class="main__form__container">
+          <span class="main__form__container__title">Contact</span>
+          <span class="main__form__container__subtitle"
+            >Nous aimerions avoir de vos nouvelles!</span
+          >
+        </div>
+        <div class="main__form__list">
+          <div class="main__form__list__content">
+            <span class="main__form__list__content__title">Nom</span>
+            <div class="main__form__list__content__textfield">
+              <span class="main__form__list__content__textfield_text"
+                >Entrez votre nom</span
+              >
+            </div>
+          </div>
+          <div class="main__form__list__content">
+            <span class="main__form__list__content__title">Email</span>
+            <div class="main__form__list__content__textfield">
+              <span class="main__form__list__content__textfield_text"
+                >Entrez votre email</span
+              >
+            </div>
+          </div>
+          <div class="main__form__list__content">
+            <span class="main__form__list__content__title">Message</span>
+            <div class="main__form__list__content__textfield">
+              <span class="main__form__list__content__textfield_text"
+                >Entrez votre message ici</span
+              >
+            </div>
+          </div>
+          <div class="main__form__list__button">
+            <div class="main__form__list__button--secondary">Annuler</div>
+            <div class="main__form__list__button--primary">Envoyer</div>
+          </div>
+        </div>
+      </section>
+
 Elements : 
 
+main__form__container : contient le titre et soutitre du formulaire
+main__form__container__title : titre du formulaire
+main__form__container__subtitle : sous-titre du formulaire
+main__form__list : liste du formaile qui contient les different element
+main__form__list__content : contient un element d'un formulaire
+main__form__list__content__title : titre d'un element d'un formulaire
+main__form__list__content__textfield : bordure pour ecrire dans le formulaire
+main__form__list__content__textfield_text : ecriture avec instruction dans le textfield
+main__form__list__button : conteneur pour les deux types de boutons
+main__form__list__button--secondary : boutons secondaire 
+main__form__list__button--primary : bouton primaire
 
 */
 
@@ -721,8 +1128,24 @@ Section bas de page
 
 utilisation : 
 
+<section class="footer__section">
+        <div class="footer__container">
+          <div class="footer__cta">
+            <div class="footer__cta__button"></div>
+            <span class="footer__cta__title">Obtenez vos billets</span>
+          </div>
+          <a href="#">Politique de confidentialité</a>
+          <a href="#">Conditions d'utilisation</a>
+          <a href="#">© 2023 Festival Lumière Urbaine</a>
+        </div>
+      </section>
+
 Elements : 
 
+footer__container : contient le bouton cta et quelque liens
+footer__cta : contient les elements dans un bouton cta
+footer__cta__button : bouton cta
+footer__cta__title : titre du bouton cta
 
 */
 
